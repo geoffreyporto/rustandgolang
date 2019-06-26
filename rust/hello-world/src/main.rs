@@ -1,16 +1,19 @@
+/*-----------------------------------------------------------------------------
+*******  Modulo      : hello-world.rs                                   *******
+*******  Descripcion : Basic code for rust                              *******
+*******                Ver. 01.00.00                                    *******
+*******  Fecha       : 2019-25-06                                       *******
+*******  Autor       : Geoffrey Porto                                   *******
+*******  Copyright(c): RUSTANDGOLANG, S.A.                              *******
+-----------------------------------------------------------------------------*/
 
 use std::thread;
 use std::time::Duration;
- 
-fn ex_thread() {
-   println!("El thread {:?} se está ejecutando", std::thread::current().id());
-   thread::sleep(Duration::from_millis(1));
-}
 
-// Funcicón principal
+// Main function 
 fn main() {
 
-    /* Tipos de datos
+    /* Data Type
     bool	: The boolean type.
     char	: A character type.
     i8	: The 8-bit signed integer type.
@@ -31,21 +34,21 @@ fn main() {
     tuple	: A finite heterogeneous sequence, (T, U, ..).
     */
 
-    //Mis datos
+    //My variables
     let mut nombre = "Geoffrey"; //variable mutable (puede cambiar de valor)
     //let nombre = "Geoffrey"; //variable inmutable (puede cambiar de valor)
     let lenguaje = "Rust";
     const ANIO: i32 = 2019;
     nombre = "Plivia";
 
-    //Variables tipo numeros
+    //Variables type numbers
     let suma = 5 + 10;
     let resta = 95.5 - 4.3;
     let multiplicacion = 4 * 30;
     let division = 56.7 / 32.2;
     let modulo = 43 % 5;
 
-    //variables tipo char
+    //variable type char
     let vchar: char = 'c';
 
     //bolleanos
@@ -104,6 +107,11 @@ fn main() {
       };
     }
     
+}
+
+fn ex_thread() {
+   println!("El thread {:?} se está ejecutando", std::thread::current().id());
+   thread::sleep(Duration::from_millis(1));
 }
 
 /*fn imprime(arg: Type) -> ReturnType {
